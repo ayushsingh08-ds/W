@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Simple Calculator Code Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap; /* Preserves formatting */
+            word-wrap: break-word; /* Ensures long lines wrap */
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator HTML Code</h1>
+    <pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Simple Calculator&lt;/title&gt;
+    &lt;style&gt;
+        table, td, th {
+            border: 1px solid black;
+            width: 33%;
+            text-align: center;
+            background-color: DarkGray;
+            border-collapse: collapse;
+        }
+        table {
+            margin: auto;
+        }
+        input {
+            text-align: right;
+        }
+    &lt;/style&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function calc(clicked_id) {
+            var val1 = parseFloat(document.getElementById(&quot;value1&quot;).value);
+            var val2 = parseFloat(document.getElementById(&quot;value2&quot;).value);
+            if (isNaN(val1) || isNaN(val2)) {
+                alert(&quot;ENTER VALID NUMBER&quot;);
+            } else if (clicked_id == &quot;add&quot;) {
+                document.getElementById(&quot;answer&quot;).value = val1 + val2;
+            } else if (clicked_id == &quot;sub&quot;) {
+                document.getElementById(&quot;answer&quot;).value = val1 - val2;
+            } else if (clicked_id == &quot;mul&quot;) {
+                document.getElementById(&quot;answer&quot;).value = val1 * val2;
+            } else if (clicked_id == &quot;div&quot;) {
+                document.getElementById(&quot;answer&quot;).value = val1 / val2;
+            }
+        }
+
+        function cls() {
+            document.getElementById(&quot;value1&quot;).value = &quot;0&quot;;
+            document.getElementById(&quot;value2&quot;).value = &quot;0&quot;;
+            document.getElementById(&quot;answer&quot;).value = &quot;&quot;;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th colspan=&quot;4&quot;&gt;SIMPLE CALCULATOR&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Value 1&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;value1&quot; value=&quot;0&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;Value 2&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;value2&quot; value=&quot;0&quot; /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;Addition&quot; id=&quot;add&quot; onclick=&quot;calc(this.id)&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;Subtraction&quot; id=&quot;sub&quot; onclick=&quot;calc(this.id)&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;Multiplication&quot; id=&quot;mul&quot; onclick=&quot;calc(this.id)&quot; /&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;button&quot; value=&quot;Division&quot; id=&quot;div&quot; onclick=&quot;calc(this.id)&quot; /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Answer:&lt;/td&gt;
+            &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;answer&quot; value=&quot;&quot; disabled /&gt;&lt;/td&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;input type=&quot;button&quot; value=&quot;CLEAR ALL&quot; onclick=&quot;cls()&quot; /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
