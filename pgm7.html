@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display HTML and CSS Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        pre {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Embedded, External, and Inline Styles Example</h1>
+
+    <h2>Embedded Style Sheets</h2>
+    <pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Embedded Style sheets&lt;/title&gt;
+&lt;style type="text/css"&gt;
+body{background-color: pink;}
+h1 {color:orange; text-align: center;}
+p { font-family: "Times New Roman"; font-size: 20px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Embedded Style Sheets&lt;/h1&gt;&lt;br&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2>External Stylesheets</h2>
+    <pre>
+extern.css:
+body {background-color: #d0e4fe;}
+h1 {color: orange; text-align: center;}
+p {font-family: "Times New Roman"; font-size: 20px;}
+
+extern.html:
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;External Style Sheets&lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="extern.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;External Style Sheets&lt;/h1&gt;&lt;br&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2>Inline Styles</h2>
+    <pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;HTML Tables&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="pink"&gt;
+&lt;center&gt;
+&lt;h1&gt;Creating HTML Tables&lt;/h1&gt;&lt;br&gt;
+&lt;table border="2" cellpadding="4" cellspacing="4"&gt;
+&lt;tr&gt;
+&lt;th colspan="2" style="background-color:red"&gt;WebSites&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style="background-color:blue"&gt;MailSites&lt;/th&gt;
+&lt;th style="background-color:green"&gt;JobSites&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="background-color:grey"&gt;Gmail&lt;/td&gt;
+&lt;td style="background-color:aqua"&gt;Naukri&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="background-color:yellow"&gt;Yahoo&lt;/td&gt;
+&lt;td style="background-color:purple"&gt;JobStreet&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

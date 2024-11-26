@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display HTML and JavaScript Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        pre {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML & JavaScript Code Example</h1>
+
+    <pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;
+var var1 = setInterval(inTimer, 1000);
+var fs = 5;
+var ids = document.getElementById("demo");
+
+function inTimer() {
+    ids.innerHTML = 'TEXT GROWING';
+    ids.setAttribute('style', "font-size: " + fs + "px; color: red");
+    fs += 5;
+    if(fs >= 50 ){
+        clearInterval(var1);
+        var2 = setInterval(deTimer, 1000);
+    }
+}
+
+function deTimer() {
+    fs -= 5;
+    ids.innerHTML = 'TEXT SHRINKING';
+    ids.setAttribute('style', "font-size: " + fs + "px; color: blue");
+    if(fs === 5 ){
+        clearInterval(var2);
+    }
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>
